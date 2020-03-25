@@ -11,7 +11,7 @@ class App {
         this.mountMiddleware();
     }
     mountMiddleware() {
-        this.express.set("views", path.join(__dirname, "src/views"));
+        this.express.set("views", path.join(__dirname, "views"));
         this.express.set("view engine", "ejs");
     }
     mountRouter() {

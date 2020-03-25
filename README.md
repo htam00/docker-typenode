@@ -16,6 +16,4 @@
 > $ npm start 
 
 
-### Contribuints
-
 <p align="center">&copy;htam00 2020 </p>
