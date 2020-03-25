@@ -18,4 +18,4 @@
 
 ### Contribuints
 
--> &copy;htam00 2020 <-
+<p align="center">&copy;htam00 2020 </p>
