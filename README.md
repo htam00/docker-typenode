@@ -3,12 +3,19 @@
 #### Clone Project
 > $ git clone https://github.com/htam00/docker-typenode.git
 
+#### Open Folder Project
+> $ cd docker-typenode
+
 #### Install Dependencies
 > $ npm install
 
 #### Transpile Typescript
 > $ npm run tsc
 
-### Start Project
-
+#### Start Project
 > $ npm start 
+
+
+### Contribuints
+
+&copy;htam00 2020

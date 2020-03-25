@@ -8,5 +8,8 @@ dotenv.config()
 const port = process.env.PORT || 8080
 
 // Running Server
-app.listen(port, () => console.log(`SERVER:: localhost:${port}`)) 
+app.listen(port, () => {
+    // tslint:disable-next-line:no-console
+    console.log(`SERVER:: localhost:${port}`)
+})
 
