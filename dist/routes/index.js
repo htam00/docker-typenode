@@ -1,33 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const Article_1 = require("../models/Article");
+const ArticlesController = require("../contollers/ArticlesController");
+const AuthenticationController = require("../contollers/AuthenticationController");
 const router = express_1.Router();
 router.get('/', (req, res) => {
     res.render('home');
 });
-router.get('/blog', (req, res) => {
-    Article_1.Article.find({}, (err, articles) => {
-        if (err)
-            // tslint:disable-next-line:no-console
-            console.log(err);
-        // tslint:disable-next-line:no-console
-        console.log(articles);
-    });
-    res.render('blog');
-});
-router.post('/blog', (req, res, next) => {
-    const title = req.body.title;
-    const description = req.body.description;
-    const article = new Article_1.Article({
-        title,
-        description
-    });
-    // tslint:disable-next-line:no-shadowed-variable
-    article.save((err, article) => {
-        // tslint:disable-next-line:no-console
-        !err ? console.log(article) : console.log(err);
-    });
-});
+router.get("/blog", ArticlesController.allArticle);
+router.post("/blog", ArticlesController.addArticle);
+router.get('/login', AuthenticationController.login);
+router.get('/register', AuthenticationController.register);
 exports.default = router;
 //# sourceMappingURL=index.js.map

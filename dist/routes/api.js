@@ -8,5 +8,8 @@ router.get('/', (req, res) => {
 router.get('/force', (req, res) => {
     res.send('');
 });
+router.get('/message', (req, res) => {
+    res.json({ message: 'Hello World' });
+});
 exports.default = router;
 //# sourceMappingURL=api.js.map
